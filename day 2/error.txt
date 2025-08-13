@@ -8,4 +8,4 @@ b
 num = int(sys.argv[0])
 num
 
-#
+#type error: range expect atleast 1 argument
