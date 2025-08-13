@@ -1,0 +1,30 @@
+floating point numbers are stored using IEEE standards.
+
+RELATIONAL OPERATORS:(Which are two most important and useful)
+< < >= <= != ==
+
+LOGICAL OPERATORS:
+& && | || ! (C/C++/JAVA/C# ETC)
+
+and or not !
+DAY1:
+condionaal programming":
+Tax calculation problem
+farmer problem
+student result problem
+check if a number is perfect square
+Check if a year is leap year
+
+DAY2:
+problems on loops:
+*implement range function
+accept the number of loines of the shape and draw the following shapes:
+1. X shape
+2. Hollow square
+3. X inside hollow square
+4. pascal triangle
+5. rhombus
+accept a number and implement following programs:
+1. find sum of even placed digits
+2. find sum of odd placed even digits in a number
+3. find 2nd smallest digit in the number
