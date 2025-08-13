@@ -1,0 +1,7 @@
+range function in python:
+
+range(10)
+start from 0 (default start value) and end with 9 (one before 0)
+
+range(2, 100, 5)
+start from 2 (user given start value)
