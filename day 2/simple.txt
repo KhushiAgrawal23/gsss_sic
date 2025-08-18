@@ -1,1 +1,6 @@
-this is a simple file
+composition: it is part of blades is part of fan tyre is part of car
+existence of the whole object is depending on the existence of part object
+the whole object and part object cannor existe independendtly
+
+
+type of relationship suv is type of car 
