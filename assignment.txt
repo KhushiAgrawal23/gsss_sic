@@ -28,3 +28,8 @@ accept a number and implement following programs:
 1. find sum of even placed digits
 2. find sum of odd placed even digits in a number
 3. find 2nd smallest digit in the number
+
+
+why in python there is npo implicit typecasting
+sum = 'abc' + 55
+is a type error we can concatenate only a string to string not a number to a string 
