@@ -11,5 +11,3 @@ elif 1200001<= taxationL2.taxable_income <=1500000:
     tax_percentage = 15
 else:
     tax_percentage = 30
-
-

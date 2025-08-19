@@ -5,3 +5,13 @@ start from 0 (default start value) and end with 9 (one before 0)
 
 range(2, 100, 5)
 start from 2 (user given start value)
+
+functions that are caled via object are called methods and function caled independently are called function 
+
+map access all the element one by one 
+
+import pymysql
+it will connect my sql to python 
+connection.connectDB()
+cursor.executeQuery()
+all the error are classes and object is automatically created by python
