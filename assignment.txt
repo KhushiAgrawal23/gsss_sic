@@ -137,3 +137,7 @@ sum = 'abc' + 55
 is a type error we can concatenate only a string to string not a number to a string
 
 
+------------------------------------------------------------------------------------------------------
+DAY 4
+
+how to read input  in python till will give 

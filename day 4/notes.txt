@@ -17,4 +17,7 @@ n[0]   2
 value at(1201+0)
 
 
-adress-adress= number() no. of elements btw these 2 adress)
+adress-adress= number() no. of elements btw these 2 adress
+
+
+list() #creating + initializing
