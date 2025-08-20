@@ -28,6 +28,13 @@ accept a number and implement following programs:
 1. find sum of even placed digits
 2. find sum of odd placed even digits in a number
 3. find 2nd smallest digit in the number
+<<<<<<< HEAD
+
+
+why in python there is npo implicit typecasting
+sum = 'abc' + 55
+is a type error we can concatenate only a string to string not a number to a string 
+=======
 4. find 2nd biggest digit and also check if 2nd biggest digit is 
 
 
@@ -141,3 +148,4 @@ is a type error we can concatenate only a string to string not a number to a str
 DAY 4
 
 how to read input  in python till will give 
+>>>>>>> 70b338db9de0361c0b5947d1f4922de72ef4b787
