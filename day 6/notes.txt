@@ -1,0 +1,12 @@
+find and index works the same just in find if the value is not there it will return -1 and index will 
+give value error 
+
+
+
+-------------------------------------------------------------------------
+SPECIAL PURPOSE REGISTER:
+
+Accumulator: since x+y+z so 1st x+y will be done its stored somewhere which is this register so that it 
+can be accessed easily then the sum +z 
+
+RECURSION ERROR: maximum recursion 
