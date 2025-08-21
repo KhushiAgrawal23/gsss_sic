@@ -1,0 +1,154 @@
+floating point numbers are stored using IEEE standards.
+
+RELATIONAL OPERATORS:(Which are two most important and useful)
+< < >= <= != ==
+
+LOGICAL OPERATORS:
+& && | || ! (C/C++/JAVA/C# ETC)
+
+and or not !
+DAY1:
+condionaal programming":
+Tax calculation problem
+farmer problem
+student result problem
+check if a number is perfect square
+Check if a year is leap year
+
+DAY2:
+problems on loops:
+*implement range function
+accept the number of loines of the shape and draw the following shapes:
+1. X shape
+2. Hollow square
+3. X inside hollow square
+4. pascal triangle
+5. rhombus
+accept a number and implement following programs:
+1. find sum of even placed digits
+2. find sum of odd placed even digits in a number
+3. find 2nd smallest digit in the number
+4. find 2nd biggest digit and also check if 2nd biggest digit is 
+
+
+Taxation Problem:
+
+Tax Calculator Problem
+GlobalNext Solutions, a rapidly growing IT company, employs a diverse workforce ranging from entry-
+level developers to senior executives. The HR department wants to streamline the tax calculation
+process for employees under the New Tax Regime (2023). They’ve decided to build a tax calculation
+program that computes salaries, taxes, and net incomes while ensuring compliance with the latest tax
+laws.
+As a software developer in GlobalNext’s HR-Tech team, you are tasked with developing this program.
+The system should process employee salary details, validate inputs, calculate taxes, and generate
+detailed reports.
+The program should:
+1. Accept employee details, including monthly salary components.
+2. Calculate gross and taxable income according to the New Tax Regime (2023).
+3. Compute the tax payable using the appropriate tax slabs.
+4. Apply any applicable standard deductions and rebates.
+5. Generate reports detailing gross salary, taxable income, tax payable, and net salary.
+Level 1: Basic Input and Salary Calculation
+Objective: Capture employee details and calculate the gross salary.
+Tasks:
+• Accept the following inputs for an employee:
+o Name
+o EmpID
+o Basic Monthly Salary
+o Special Allowances (Monthly)
+o Bonus Percentage (Annual Bonus as % of Gross Salary)
+• Calculate:
+o Gross Monthly Salary = Basic Salary + Special Allowances
+o Annual Gross Salary = (Gross Monthly Salary × 12) + Bonus
+• Output:
+o Display the employee details, gross monthly salary, and annual gross salary.
+
+Level2:
+Level 2: Taxable Income Calculation
+Objective: Calculate taxable income after standard deductions.
+Tasks:
+• Deduct a Standard Deduction of ₹50,000 from the annual gross salary.
+• Compute the Taxable Income and display all intermediate calculations.
+Output: Display gross salary, standard deduction and taxable income.
+
+Level 3: Tax and Rebate Calculation
+Objective: Compute tax payable using the New Tax Regime (2023) slabs.
+Tasks:
+1. Calculate tax based on the following slabs:
+o ₹0 - ₹3,00,000: 0%
+o ₹3,00,001 - ₹6,00,000: 5%
+o ₹6,00,001 - ₹9,00,000: 10%
+o ₹9,00,001 - ₹12,00,000: 15%
+o ₹12,00,001 - ₹15,00,000: 20%
+o Above ₹15,00,000: 30%
+2. Apply Section 87A Rebate:
+o Taxable income ≤ ₹7,00,000 → 100% rebate (tax payable = ₹0).
+3. Add a 4% Health and Education Cess to the calculated tax.
+Output:
+• Display a detailed tax breakdown, including slabs, cess, and total tax payable.
+----------------------------------------
+Level 4: Net Salary Calculation
+Objective: Calculate annual net salary after tax deductions.
+Tasks:
+1. Compute Net Salary = Annual Gross Salary - Total Tax Payable.
+2. Display:
+o Annual Gross Salary
+o Total Tax Payable (including cess)
+o Annual Net Salary
+--------------------
+Level 5: Report Generation
+Objective: Generate a detailed report for employees.
+Tasks:
+1. Summarize all computed details:
+o Employee Details (Name, EmpID)
+o Gross Monthly Salary
+o Annual Gross Salary
+o Taxable Income
+o Tax Payable (with breakdown)
+o Annual Net Salary
+2. Format the output as a report for better readability.
+----------------------------------
+
+
+day 3
+
+learn output formating in int and string
+
+why in python we do not have the increment and decrement operator
+
+learn about __main __
+
+what is pep3 what is pythonic
+
+dev.mozilla.org
+docs.python.org
+python docs
+microsoft have given wonderful documentation
+
+
+can we modify a list which is an element in the tuple
+
+we want to pass command line arguments into the my range function 
+
+why and for where ands what purpose in argv we need the file name 
+
+why in python there is npo implicit typecasting
+sum = 'abc' + 55
+is a type error we can concatenate only a string to string not a number to a string
+
+
+------------------------------------------------------------------------------------------------------
+DAY 4
+
+how to read input  in python till will give 
+
+------------------------------------------------------------------------------------------------------
+
+DAY 5 
+
+why there is no index error in the case of slicing
+
+implement a function find (similar to find method in class) which mimics the find method of string class
+
+why the value is zero in mysuru string if we find m its 0 and if we are finding empty set then ALSO IT IS ZERO
+
