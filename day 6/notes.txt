@@ -10,3 +10,131 @@ Accumulator: since x+y+z so 1st x+y will be done its stored somewhere which is t
 can be accessed easily then the sum +z 
 
 RECURSION ERROR: maximum recursion 
+
+
+
+EXCEPTIONS IN PYTHON
+Exception Handling
+
+What is an Exception?
+What happens when an exception is created?
+What can be done when an exception is created?
+How an error is named?
+
+Usually in Python we use snake_case
+In Java we use camelCase
+PascalCase is what we use to name Errors in Python/Java
+
+What is an Exception?
+When we are asking via an instruction to the PVM (execution machine) to run but it cannot be run, then an exception is created.
+
+For example, if we ask a number, say 450 to be divided by zero:
+450/0
+which cannot be done, then an exception occurs.
+2nd example, we are trying to connect to a DB, but the DB doesn't exist, then an exception occurs.
+
+What are different exceptions:
+
+TypeError
+
+ValueError
+
+NameError
+
+ZeroDivisionError
+
+IndexError
+when we are trying to access 10th element in a list, but it has just 6 elements.
+
+----------------------------------------------------------------
+What happens when an exception is created?
+
+When an exception is created, an object of a specific class is created and its reference value is thrown.
+
+What can be done when an exception is created?
+Handle the exception!
+
+The mechanism to handle an exception:
+which is the try-except blocks!
+
+It is the try block where we put in the code which we SUSPECT where the exception may occur.
+How do we suspect?
+With our previous development experience.
+We should also know what exception(s) may be created.
+Such suspected code we put it into try block.
+Now, if by chance as we suspected, if the exception occurs, it is the except block which CATCH the reference value of the object of the specific Error(exception) class.
+
+RULES FOR EXCEPTION HANDLING:
+-> The try and except blocks must be a pair similar to if-else. i.e., the except block must immediately follow the try block. In between these 2 blocks, we cannot define any other instructions.
+-> Each try block can have more than one except blocks. But only one of the except block is executed.
+-> If there are multiple except blocks defined, then they are executed similar to the cases inside a match block. That is, the reference value which is thrown is compared with the except blocks in the order of their definition.
+-> We can nest a try block with in other.
+
+what do we do within a except block?
+We try to give a solution for the error that has occured.
+Once an exception has occured, the remaining statements inside the try block are skipped. Thus the normal flow of execution is disturbed.
+So we have to take round  (change the path of execution) and reach a specific except block (if matches) execute it and then the remaining statements after the except block are executed.
+
+-> The try and ecxept blocks are defined within a function/method.
+-> If none of the except blocks match, then again the exception/error is controlled by PVM which stops the execution and prints the stack trace of the error.
+-> So to avoid none of the except blocks are matched we can define a generic except block which can accept any type of error.
+-> If none of the except blocks of the inner try matches, then the PVM will continue to match the error with thye except blocks of the outer try block.
+-> If we have defined and placed the generic except block above the specialized except blocks then the specialized ones will be unreachable and this will turn into syntax error.
+
+Further Learning:
+propogating the exceptions to the caller (throws keyword)
+Raising/creating an exception explicitly.
+
+Keywords we use in exception handling:
+try
+except
+throw/raise
+throws (The method where the exception has occured may defy handling the exception and propogate it to its caller)
+
+-> By introduing the exception handling, we can continue the execution of the App/Program.
+-> What happens if no exception occurs?
+All the instructions in the try block will complete and all the except blocks are skipped and the statements defined after the except blocks are run and thus the function/method completes the execution normally.
+---------------------------------------------------
+FUNCTION CALL STACK:
+How functions work implicitly
+
+SPECIAL PURPOSE REGISTERS:
+Accumalator: It uis used to store intermediate results.
+MAR:
+MDR:
+IR: Instruction register -> It holds address of the instruction that is currently running (getting executed)
+PC: Program Counter -> It holds address of the next instruction to be executed
+SP: Stack Pointer -> It holds address of the top frame in the stack.
+FP: Frame Pointer -> It holds address of the frame of function which is currently running.
+------------------
+Frame: A frame is memory allocated to a function during runtime.
+
+Contents of a Frame:
+    the local variables
+    the function arguments
+    linkages (address of the functions we are calling)
+    return address
+-----------------------------------------------
+RECURSION:
+A function that calls itself. When the caller and callee are one at the same function.
+Such a function is called recursive function and such a call statement is called as recursive call.
+
+Avoid recursion when we can easily solve the problem iteratively.
+------------------------------
+my_str = {{{}{}}
+{{}}}
+{}}{
+------------------------------------
+https://forms.gle/8jwCCQ8wYaaREaBt8
+
+------------------------------------
+BUBBLE SORT:
+INSERTION SORT:
+BINARY SEARCH:
+LINEAR SEARCH:
+QUICK SORT:
+MERGE SORT:
+RADIX SORT:
+SELECTION SORT: ***
+BUCKET SORT: ***
+HEAP SORT: ***

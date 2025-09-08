@@ -1,6 +1,13 @@
 import sys
+import os
 
-print('User given input is \n', sys.argv[1:])
+filename = input('Enter file name: ')
+# os.open(sys.argv[1], 'r')
+with open (filename, 'r'):
+    # data = read_data
+
+
+print('User given input is \n', data)
 
 states = []
 capitals = list()
@@ -15,4 +22,3 @@ print('%-15s %s'%('STATE', 'CAPITAL'))
 print('-' * 24)
 for i in range(len(states)):
     print('%-15s %s'%(states[i], capitals[i]))
-    
