@@ -15,3 +15,112 @@ it will connect my sql to python
 connection.connectDB()
 cursor.executeQuery()
 all the error are classes and object is automatically created by python
+
+
+
+
+
+range function in Python:
+
+range(10)
+Start from 0 (default start value) and end with 9 (one before 10)
+
+range(2, 10)
+Start from 1 (user given start value) and end with 9 (one before 10)
+
+range(2, 100, 5)
+Start from 2 (user given start value) and end with 99 (one before 100) with user given increment/step of +5
+
+range(90, 10, -4)
+Start from 90 (user given start value) and end with 9 (one before 10) with user given increment of -4 (or decrement of +4)
+
+Correct way to call range, but no o/p:
+range(10, 10)
+range(0)
+range(20, 5)
+
+Incorrect way of callinf range: (We get exception)
+range()
+range(10, 20, 'abc')
+range('abc')
+------------------
+def my_range(*var_args):
+    print(var_args)
+    print(type(var_args))
+    print(var_args[0])
+    print(type(var_args[0]))
+
+#my_range(0)
+#my_range()
+my_range(1, 2, 3)
+#my_range('a', 'bnm', 'gsss', 'gsssietw')
+-------------
+student = {id : 101, name : 'nithin', marks: 89.99}
+[id, name, marks] = student
+console.log(id)
+console.log('Name = ', name)
+console.log(`Marks = ${marks}`)
+print(f'Marks = {marks})
+
+byte        tinyint
+short       smallint
+int         int
+long        bigint
+
+numbers = (1, 4, 6, 9)
+first, second, third, fourth = numbers
+print(second)
+
+numbers = list(map(int, sys.argv[1:]))
+
+numbers = list(sys.argv[1:])
+nums = []
+for i in range(len(numbers)):
+    nums.append(int(numbers[i]))
+
+     *
+    ***
+   *****
+  *******
+ ********* 
+***********
+
+void draw_triangle(int numberOfLines) { 
+    for(int i = 1; i <= numberOfLines; i++) { // for each line
+        for(int j = 1; j <= numberOfLines-i; j++) {
+            putc(stdout, ' ');
+        }
+        for(int k = 1; k <= 2 * i - 1; k++) {
+            putc(stdout, '*')
+        }
+        putc(stdout, '\n');
+    }
+}
+------------------------------
+import pymysql
+connection.ConnectDB()
+cursor.executeQuery()
+
+def my_function(): thowrs PqrError, LmnError
+try:
+    for number in sys.argv[1:]:
+        for element in number:
+            if not (element >= '0' and element <= '9'):
+                print(f'Invalid input {number}')
+                sys.exit('Program ended')
+except AbcError:
+    pass
+except XyzError:
+    pass
+
+Keywords in Exception Handling:
+try
+except
+throws
+raise
+classes: Exception, ValueError, TypeError etc.
+
+Chapter3 test is given
+
+Repo Link for DSA and Problem Solving
+https://github.com/gmaheswaranmca/au-guvi

@@ -21,3 +21,155 @@ adress-adress= number() no. of elements btw these 2 adress
 
 
 list() #creating + initializing
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+In how many different ways the below function can calle?
+
+def my_function(num1 = 100, num2 = 400):
+    return num1 - num2
+
+print(my_function(None, 20))
+print(my_function(None, None))
+print(my_function(20, None))
+my_function(10, 20)
+my_function(10)
+my_function()
+my_function(num1 = 25)
+my_function(None, 20)
+my_function(num2 = 25)
+my_function(num2 = 25, num1 = 99)
+my_function(num1 = 25, num2 = 99)
+------------------------------------------------
+list in Python
+list as a DS
+What is a DS?
+Birth of a DS like list/array
+implimentation of an array in memory using addresses and adress arithmetic
+Uses
+Pros and Cons
+Alternatives
+Beyond list
+
+Its a collection of items/data
+All the items are stored in contigious memory locations. That is if you any 2 consecutive elements, then there is no gap in between them.
+list, specifically in Python need not be of the same type as in the case of C/C++/Java etc.
+
+What is a DS?
+int numbers[10]; // DS
+int num1, num2, num3, num4, num5; // May or may not be a DS
+
+The lookup (accessing any element in the array/list) is one unit time.
+Thus the efficiency of accessing an element in the array is O(1)
+Usually size of an array is fixed. Because of which there are almost always chances of either wastage of memory or shortage of memory.
+Thus, an array is time efficient DS but memory inefficienct DS.
+
+Assume size value is given by user at runtime
+float *numbers = new float[size];
+float[] numbers = new float[size];
+
+float numbers[20];
+
+Good example of list/array:
+To store names of girls of SIC training.
+To store distances of the places to be visited in the order of places of the trip.
+Not good examples of Array/List:
+To store all the UPI transactions of a specific date in the entire country.
+To store details of the items bought by a customer in a mall?
+----------------------------------------------------
+list is a class in python.
+We create object(s) out of a class
+When we say:
+n = 10
+Here n is just a number. Its value 10 has not units like cm, mts or mt/sec or Hz or mts/sec square
+Now say, we have a course which has a minimum duration and a maximum duration.
+engg_course_duration = 4
+units = 'years'
+minimum_duration = 4
+maximum_duration = 8
+
+class EngineeringCourseDuration:
+    duration
+    unit
+    minimum_duration
+    maximum_duration
+    maximum_per_semester
+
+    initialize_values()
+    set_duration()
+    get_duration()
+    set_unit()
+    get_unit()
+    set_maximum_duration()
+
+class Customer
+    id
+    name
+    father_name
+    phone_number
+    email
+    address
+    adhaar
+    pan
+
+class Account
+    id
+    custmoer_id
+    account_number
+    account_type
+    branch_id
+    balance
+
+    create()
+    delete()
+    freeze()
+    modify()
+    read_details()
+
+class Transaction
+    id
+    datetime
+    type
+    account_id
+
+    check_balance()
+    deposit()
+    withdraw()
+    mini_stmt()
+    change_pin()
+    add_beneficiary()
+    transfer()
+
+Account* account = new Account(); // C++
+Account account = new Account(); // Java
+account = Account() // Python
+
+class NRIAccount : public Account {
+private:
+    string passportNumber;
+};
+
+class NRIAccount extends Account {
+    private String passportNumber;
+}
+
+class NRIAccount (Account):
+    def __init__(self):
+        passportNumber = ""
+
+names1 = []
+names2 = list()
+
+names3 = ['suresh', 'mahesh', 'girish']
+other_names = list(names3)
+---------------------------------------------------
+list methods:
+    list()  # creating + initializing
+    append()
+    pop()
+    insert()
+    remove()
+    sort()
+    reverse()
+    extend()
