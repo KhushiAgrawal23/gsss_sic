@@ -1,0 +1,231 @@
+Bubble Sort:
+Its trivial (simpler, easier) and traditional way of sorting technique. Such kind of technique we call as BRUTE FORCE.
+
+Compare consecutive elements of the array
+Assuming we are sorting in increasing order, when the left element (element at lower index) is higher than the next element (right element) then we swap them.
+By continuing this till end of un-sorted part of the array, we end up end pushing or bubbling the largest element in its final position.
+Once the element is in its final position, we do not disturb it.
+Thus it goes into the sorted part of the array.
+Thus we must be able to imagine 2 arrays in the given array.
+
+In Bubble sort, we do not check for anything like, if the array is some what or almost sorted. Nor we consider any element to be already in its final position.
+We just start sorting (aaplying the logic).
+Now, say if the given array is already fully sorted, yet, the Bubble sort algorithm has same number of comparisons when the array is not sorted.
+
+For any sorting technique, the best case scenario is that the array is already sorted.
+The worst case scenario is when the given array is already sorted, but we have to sort in reverse order.
+
+In any sorting technique, we must reach/access every element from the unsorted array (given array). So the efficiency of this part of the sorting is O(n)
+And we must also have a logic that puts every element in its right position in the array. Efficiency of this is O(n)
+
+n-1  +  n-2  +  n-3  +  ..... 4 + 3 + 2 + 1
+= n(n+1)/2
+~ n2
+
+Usually, in almost all sorting techniques, the outer loop accesses elements from the unsorted array.
+The inner loop does some work such as comparison, shifting elements, finding position etc.
+
+algorithm:
+input: array
+from 1st element till last in given array do:
+    from 1st element till last element in unsorted part of given array do:
+        compare consecutive elements:
+        if left element is greater than right element then:
+            swap the elements
+
+Pseudocode:
+Bubble_sort(ARRAY)
+for i from 0 to n-2 do:
+    for j from 0 to n-2-i do:
+        if ARRAY[j] > ARRAY[j+1] then:
+            swap: ARRAY[j] , ARRAY[j+1]
+
+def bubble_sort(array)
+    for i in range(len(array)-1):
+        for j in range(len(array)-1-i):
+            if array[j] > array[j+1]:
+                array[j] , array[j+1] = array[j+1] , array[j]
+
+WCE: O(n2)
+BCE: O(n2)
+
+45  32  23  50  1  11  99  50  30  55
+32  23  45  1  11  50  50  30  55  99
+
+1  3   5   8  19
+
+def bubble_sort(array)
+    for i in range(len(array)-1):
+        sorted = True
+        for j in range(len(array)-1-i):
+            if array[j] > array[j+1]:
+                array[j] , array[j+1] = array[j+1] , array[j]
+                sorted = False
+        if sorted:
+            return
+
+WCE: O(n2)
+BCE: O(n)
+-------------------------------------------------
+Insertion Sort: Decrease and Conquer technique
+
+45  32  23  50   1  11  99  50  30  55
+32  45  
+1   11  23  30  32  45  50  50  55  99
+
+
+1   11  23  30  32  45  50  50  55  99
+1   11  23  30  32  45  50  50
+
+ele = 50
+
+insertion_sort(ARRAY):
+    for i from 1 to n-1 do:
+        ele = ARRAY[i] # element to be inserted
+        j = i-1 # index of last element in sorted array
+        while j >= 0 and ele < ARRAY[j]: # until we reach index 0 or the position to insert new element into sorted array
+            ARRAY[j+1] = ARRAY[j] # shift present element in sorted array to next position
+            j-- # move back in the sorted array by one position
+        ARRAY[j+1] = ele # place/insert the element in its right position
+--------------------------------------------------
+Logic/algorithm
+Efficiencies
+Category
+Optimization
+Application
+
+---------------------------------------------------
+45  82  23  50   1  11  99  70  30  55
+
+pivot = ARRAY[0]
+j = 1
+for i from 1 to n-1 do:
+    if pivot < ARRAY[i]
+        swap ARRAY[i] with ARRAY[j]
+        j++
+swap ARRAY[j] with ARRAY[0]
+
+def partition_array(my_list):
+    pivot = my_list[0]
+    for i in rabge(1, n):
+        if pivot < my_list[i]
+            my_list[i], my_list[j] = my_list[j], my_list[i]
+            j += 1
+    my_list[0], my_list[j] = my_list[j], my_list[0]
+
+partition has O(n) efficiency
+When partition partitions 2 equal halves then the quick_sort algorithm has O(LogN) efficiency
+
+Thus, BCE of quick sort is O(N LogN)
+
+In the worst case scenario the partition places the pivot element in such a position that there is always only left partitioned array or only right partitioned array. Thus making the quick_sort call the partition algorithm N times.
+Thus WCE of quick sort is O(n2)
+-----------------------------------------------------------------
+MERGE SORT
+
+45  82  23  50   1  11  99  70  30  55
+
+45  82  23  50  1       11  99  70  30  55
+
+45  82      23  50  1       11  99  70  30  55
+
+45     82      23      50     1      11     99    70     30      55
+i      j
+
+45  82     23      50     1      11     99    70     30      55
+                                                      i       j
+k=30  55
+
+45  82      23  50     1  11       70  99     30  55
+                       i           j
+k=1  11  70  99
+
+23  45  50  82      1  11  70  99     30  55
+i                    j
+
+k= 
+1  11  23  45  50  70  82  99        30  55
+i                                    j
+k=1  11  23  30  45  50  55  70  82  99
+
+def merge_sort(array, low, high):
+    if high > low:
+        mid = (low + high) // 2
+        merge_sort(array, low, mid)
+        merge_sort(array, mid+1, high)
+        array[low:high] = merge(array, low, mid, high)
+
+def merge(array, low, mid, high):
+    a1 = array[low:mid+1]
+    a2 = array[mid+1:high+1]
+    a3 = []
+    i = low
+    j = mid+1
+    while i < len(a1) and j < len(a2):
+        if a1[i] < a2[j]:
+            a3.append(a1[i])
+            i += 1
+        else:
+            a3.append(a2[j])
+            j += 1
+    a3.extend(a1[i:])
+    a3.extend(a2[j:])
+    return a3
+
+merge_sort(array, 0, len(array)-1)
+
+Efficiency of MErge Sort is O(N LogN)
+------------------------------------------------
+TREE:
+A tree is a non-cyclic DS (acyclic)
+A tree is heirarchical DS (Drives, folders and files in computer)
+In tree data is stored in NODES
+The only entry point of the tree is called as ROOT
+A Node can have any number child nodes.
+A node that is reached after traversing/descending a node (node reachable from a node)
+The Root is said to be at a LEVEL 1.
+The route we follow to reach the bottom of the tree from the ROOT is said to be PATH
+Number of nodes we traverse in a path is said to be HEIGHT of the path.
+The bottom of the path is said to be reached when there is no way to traverse any further. That is the present node has no child nodes.
+Such a node is said to be LEAF node.
+Heighest among the Heights of all the paths in the tree is the HEIGHT of the tree. In other words, highest of all possible levels in a tree is height of the tree.
+If in a tree, every node has at most 2 child nodes, then the tree is BINARY TREE.
+In a BT of height N, the maximum number of nodes is (2PowerN)-1 which is always a odd number.
+The child node to the left of a node is LEFT CHILD NODE and on similar lines, we have RIGHT CHILD NODE.
+A BT with exactly 2powerN-1 nodes is said to be COMPLETE BT.
+A BT with all the nodes having only left child nodes or only right child nodes is actually a linear DS and is the BT having least number of nodes for given height H and will have H nodes in it.
+A BT in which every node has exactly 0 or 2 child nodes only is said to be STRICTLY BT.
+The height of a node in tree is the height from it to the far leaf node.
+The tree that is obtained by traversing the left child node of the root is said to be LEFT SUB-TREE and thus we also have RIGHT SUB-TREE.
+If in a BT, every node data is higher than its left child node data and is lesser than the right child data then such a BT is said to be BINARY SEARCH TREE.
+NOTE: The nodes we can traverse from the current node itself constitutes into a BT and thus the current node itself can be considered as Root of such a tree.
+If we traverse the BT such that we access the root 1st and the left child and then the right (R'LR) then it is said to be PRE-Order traversal
+Aand the other 2 (only) traversals are LR'R and LRR'
+Note that Left always comes before Right.
+In a BST when we traverse in In-order, the data we get will be in ascending order.
+If the BST is balanced which we call BBST then searching a node in it has efficiency of O(LogN) because with every traversal, we do aways with half of the BST (either the LST or RST)
+BCE of searching an element in BST O(1)
+WCE of searching an element in BST is O(n)
+WCE of searching an element in BBST is O(LogN) which is nothing but Height of the BBST.
+We always add the new node into a BST as Leaf node.
+
+
+
+def add_node(root, new_node):
+    if root == None:
+        root = new_node
+        return root
+    temp1 = root
+    temp2 = None
+    while temp1 != None:
+        temp2 = temp1
+        if new_node.data < temp1.data:
+            temp1 = temp1.left
+        else:
+            temp1 = temp1.right
+    if new_node.data < temp2.data:
+        temp2.left = new_node
+    else:
+        temp2.right = new_node
+    return root
+------------------------------------------------------------
