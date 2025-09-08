@@ -3,3 +3,4 @@ def my_function(num1, num2=0):
 print(f'sum = {my_function(10,20)}')
 print(f'sum = {my_function(40, 90)}')
 print(f'sum = {my_function(num2 = 40, num1 = 90)}')
+print(f'Sum = {my_function((40, 90))}') # TypeError. No value is passed to num2
