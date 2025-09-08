@@ -1,0 +1,18 @@
+i++;
+j--;
+a[i] = b[j];
+b[j]++;
+
+a[++i] = b[--j]++;
+
+
+Person:
+    id, name, gender, age, location
+
+Flight:
+    id, airline, source, destination, fare, duration
+
+Book:
+    id, title, author, price, publisher, edition, number_of_pages 
+---------------------------------------------------------
+BUBBLE SORT
